@@ -1,0 +1,73 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: ($i * 100 / 12) * 1%;
+        @for $n from 1 through 5 {
+            &.col-m-l-1 {
+                width: calc(#{(($i * 100 / 12) * 1%)} - 1rem);
+                margin-left: 1rem;
+            }
+            &.col-m-l-2 {
+                width: calc(#{(($i * 100 / 12) * 1%)} - 2rem);
+                margin-left: 2rem;
+            }
+            &.col-m-l-3 {
+                width: calc(#{(($i * 100 / 12) * 1%)} - 3rem);
+                margin-left: 3rem;
+            }
+            &.col-m-l-4 {
+                width: calc(#{(($i * 100 / 12) * 1%)} - 4rem);
+                margin-left: 2rem;
+            }
+            &.col-m-l-5 {
+                width: calc(#{(($i * 100 / 12) * 1%)} - 5rem);
+                margin-left: 3rem;
+            }
+        }
+        &.col-m-r-1 {
+            width: calc(#{(($i * 100 / 12) * 1%)} - 1rem);
+            margin-right: 1rem;
+        }
+        &.col-m-r-2 {
+            width: calc(#{(($i * 100 / 12) * 1%)} - 2rem);
+            margin-right: 2rem;
+        }
+        &.col-m-r-3 {
+            width: calc(#{(($i * 100 / 12) * 1%)} - 3rem);
+            margin-right: 3rem;
+        }
+        &.col-m-r-4 {
+            width: calc(#{(($i * 100 / 12) * 1%)} - 4rem);
+            margin-right: 2rem;
+        }
+        &.col-m-r-5 {
+            width: calc(#{(($i * 100 / 12) * 1%)} - 5rem);
+            margin-right: 3rem;
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .my-#{$i} {
+        margin-top: #{$i * 1rem};
+        margin-bottom: #{$i * 1rem};
+    }
+    .mt-#{$i} {
+        margin-top: #{$i * 1rem};
+    }
+    .mb-#{$i} {
+        margin-bottom: #{$i * 1rem};
+    }
+    .m-#{$i} {
+        margin: #{$i* 1rem};
+    }
+}

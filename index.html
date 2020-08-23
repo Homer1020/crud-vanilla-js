@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Tareas</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Aplicación de Tareas</h1>
+        </div>
+    </header>
+
+    <main class="container my-2">
+        <div class="grid">
+            <section class="col-5">
+                <div class="card card-body">
+                    <h2 class="card-title">Insertar Tarea</h2>
+                    <form id="form-add-task">
+                        <div class="form-group">
+                            <label for="title-task">Titulo</label>
+                            <input type="text" class="form-input" id="title-task" placeholder="Titulo de la tarea" autocomplete="off">
+                        </div>
+                        <div class="form-group">
+                            <label for="desc-task">Descripción</label>
+                            <textarea id="desc-task" rows="10" placeholder="Descripción de la tarea" class="form-input"></textarea>
+                        </div>
+                        <input type="submit" value="Añadir" class="btn btn-primary" disabled id="button-add">
+                    </form>
+                </div>
+            </section>
+            <section class="col-7 col-m-l-2">
+                <table class="table bordered">
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Descripción</th>
+                            <th>Eliminar</th>
+                            <th>Actualizar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results">
+                        
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
